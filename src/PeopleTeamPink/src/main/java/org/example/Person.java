@@ -9,13 +9,32 @@ public class Person {
     public String getFirstName() {
         return firstName;
     }
-
     public String getLastName() {
         return lastName;
     }
-
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    private String firstName, lastName;
+    private LocalDate dateOfBirth;
+    private static int personCount;
+
+    public Person (String fn, String ln, LocalDate dob){
+        firstName = fn;
+        lastName = ln;
+        dateOfBirth = dob;
+        personCount++;
     }
 
     public int getAge() {
@@ -32,31 +51,5 @@ public class Person {
         System.out.printf("Age: %d %n", this.getAge() );
         System.out.printf("Number of People: %d %n", personCount );
     }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    private String firstName, lastName;
-    private LocalDate dateOfBirth;
-    private static int personCount;
-
-    public Person (String fn, String ln, LocalDate dob){
-        firstName = fn;
-        lastName = ln;
-        dateOfBirth = dob;
-        personCount++;
-    }
-
-
-
 
 }

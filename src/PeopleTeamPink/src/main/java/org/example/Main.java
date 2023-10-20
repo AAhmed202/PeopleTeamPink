@@ -11,7 +11,7 @@ public class Main {
         Person person2 = new Person("Ali", "Ahmed", LocalDate.of(1995, 04, 21));
         Person person3 = new Person("John", "Jake", LocalDate.of(1062, 01, 28));
 
-        person1.getFormatedString();
+        person2.getFormatedString();
 
     }
 }
