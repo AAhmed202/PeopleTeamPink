@@ -10,7 +10,7 @@ public class PersonTest {
 
     @Test
     public void getAge() {
-        Person person1 = new Person("John", "Smith", LocalDate.of(1998, 03, 12));
+        Person person1 = new Person("Steve", "Smith", LocalDate.of(1998, 03, 12));
         int expectedAge = 25;
         int generatedAge = person1.getAge();
         assertEquals(expectedAge,generatedAge);
