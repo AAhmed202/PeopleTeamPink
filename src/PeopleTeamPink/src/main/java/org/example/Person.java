@@ -28,7 +28,7 @@ public class Person {
 
     private String firstName, lastName;
     private LocalDate dateOfBirth;
-    private static int personCount;
+    private static int personCount = 0;
 
     public Person (String fn, String ln, LocalDate dob){
         firstName = fn;
@@ -41,15 +41,25 @@ public class Person {
         return Period.between(this.dateOfBirth, LocalDate.now()).getYears();
     }
 
-    public void getFormatedString() {
-        System.out.printf("First Name: %s %n", this.firstName );
-        System.out.printf("Last Name: %s %n", this.lastName );
+    public String getFormattedString() {
+        /*System.out.printf("First Name: %s %n", this.firstName );
+        System.out.printf("Last Name: %s %n", this.lastName );*/
 
-        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy ");
-        System.out.printf("DOB: %s %n", this.dateOfBirth.format(myFormatObj) );
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        /*System.out.printf("DOB: %s %n", this.dateOfBirth.format(myFormatObj) );
 
         System.out.printf("Age: %d %n", this.getAge() );
-        System.out.printf("Number of People: %d %n", personCount );
+        System.out.printf("Number of People: %d %n", personCount );*/
+
+        return "First Name: " + this.firstName +
+                "\nLast Name: " + this.lastName +
+                "\nDOB: " + this.dateOfBirth.format(myFormatObj) +
+                "\nAge: " + this.getAge() +
+                "\nNumber of People: "+ personCount;
+    }
+
+    public int getCount() {
+        return personCount;
     }
 
 }
