@@ -11,6 +11,7 @@ public class Main {
         System.out.println(person1.getCount());
         Person person2 = new Person("Ali", "Ahmed", LocalDate.of(1995, 04, 21));
         System.out.println(person2.getCount());
+        person2.resetCount();
         Person person3 = new Person("John", "Jake", LocalDate.of(1062, 01, 28));
         System.out.println(person1.getCount());*/
 
